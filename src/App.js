@@ -17,6 +17,11 @@ function App() {
         return str === reverseString;
     }
 
+    function resetValues(e) {
+        setUserInput(e.target.value)
+        setIsPalindrome(null)
+    }
+
       return (
         <div className="App">
             <div className="content">
@@ -25,7 +30,7 @@ function App() {
 
                   <form id="palindromeForm" >
                       <label htmlFor="textInput">Enter a string:</label>
-                      <input type="text" name="userInput" id="textInput" value={userInput} onChange={(e) => setUserInput(e.target.value)} />
+                      <input type="text" name="userInput" id="textInput" value={userInput} onChange={(e) => resetValues(e)} />
                       <button onClick={handleClick}>Check</button>
                   </form>
 
