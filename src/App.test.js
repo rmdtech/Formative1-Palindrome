@@ -1,8 +1,20 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+// App.test.js
+import { checkPalindrome } from './App'; // Update with correct import path
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('Palindrome Checker', () => {
+    test('Empty string should not be a palindrome', () => {
+        expect(checkPalindrome('')).toBe(true);
+    });
+
+    test('Single character string should be a palindrome', () => {
+        expect(checkPalindrome('a')).toBe(true);
+    });
+
+    test('Non-palindrome string should return false', () => {
+        expect(checkPalindrome('hello')).toBe(false);
+    });
+
+    test('Palindrome string should return true', () => {
+        expect(checkPalindrome('Racecar')).toBe(true);
+    });
 });

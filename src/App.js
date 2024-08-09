@@ -1,5 +1,11 @@
-import './App.css';
 import {useState } from 'react'
+
+export function checkPalindrome(str) {
+    str = str.toString();  // Ensure str is converted to a string
+    str = str.toLowerCase();
+    const reverseString = str.split('').reverse().join('');
+    return str === reverseString;
+}
 
 function App() {
     const title = "Palindrome Checker";
@@ -11,11 +17,7 @@ function App() {
         e.preventDefault();
         setIsPalindrome(checkPalindrome( userInput ));
     }
-    function checkPalindrome(str) {
-        str = str.toString();  // Ensure str is converted to a string
-        const reverseString = str.split('').reverse().join('');
-        return str === reverseString;
-    }
+    
 
     function resetValues(e) {
         setUserInput(e.target.value)
