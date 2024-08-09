@@ -1,10 +1,11 @@
 # Formative 1 - Palindrome Checker
+## Project Introduction
 This project allows you to test if a given string is considered a palindrome.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## What is a palindrome?
+### What is a palindrome?
 A palindrome is a word, sentence, verse, or even number that reads the same backward or forward. It derives from Greek roots that literally mean “running back” (palin is “again, back,” and dromos, “running.”) The word appears to have been created in English based on these roots in the early 1600s. [Dictionary.com](https://www.dictionary.com/e/palindromic-word/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -43,32 +44,22 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Tests
+This project uses Jest as a testing framework and can be run by using "npm test" or "npx jest".
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### What is tested?
+app.test.js contains tests for the palindrome checking tool. The test suite is made up of 4 simple tests.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Test 1 - Empty String
+An empty string should return true, as nothing reversed is still nothing.
 
-### Code Splitting
+#### Test 2 - Single Character
+A single character should also be a palindrome, as 'A' reversed is still 'A'.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Test 3 - Non-Palindrome
+A non-palindrome string should return false, e.g. 'hello' reversed is 'olleh' and therefore not a palindrome.
 
-### Analyzing the Bundle Size
+#### Test 4 - Palindrome
+A palindrome string should return true, e.g. 'racecar' reversed is 'racecar' and therefore a palindrome.
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
