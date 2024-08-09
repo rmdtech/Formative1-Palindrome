@@ -1,0 +1,2 @@
+C:\Users\RMDis\source\repos\Formative1-Palindrome\Formative1-Palindrome\obj\Debug\formative1-palindrome.esproj.SuggestedBindingRedirects.cache
+C:\Users\RMDis\source\repos\Formative1-Palindrome\Formative1-Palindrome\obj\Debug\formative1-palindrome.esproj.CoreCompileInputs.cache

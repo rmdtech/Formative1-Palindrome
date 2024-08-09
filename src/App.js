@@ -1,25 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState } from 'react'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const title = "Palindrome Checker";
+
+    const [userInput, setUserInput] = useState('');
+    const [isPalindrome, setIsPalindrome] = useState(null);
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        setIsPalindrome(checkPalindrome( userInput ));
+    }
+    function checkPalindrome(str) {
+        str = str.toString();  // Ensure str is converted to a string
+        const reverseString = str.split('').reverse().join('');
+        return str === reverseString;
+    }
+
+      return (
+        <div className="App">
+            <div className="content">
+                  <h1>{title}</h1>
+                  <p>This tool will check if your input counts as a palindrome. Palindromes are strings which read the same forwards and backwards. E.g. Racecar.</p>
+
+                  <form id="palindromeForm" >
+                      <label htmlFor="textInput">Enter a string:</label>
+                      <input type="text" name="userInput" id="textInput" value={userInput} onChange={(e) => setUserInput(e.target.value)} />
+                      <button onClick={handleClick}>Check</button>
+                  </form>
+
+                  {isPalindrome === null && <p>Please enter a string to check.</p>}
+                  {isPalindrome === true && <p className="palindrome">"{userInput}" is a palindrome</p>}
+                  {isPalindrome === false && <p className="not-palindrome">"{userInput}" is not a palindrome</p>}
+            </div>
+        </div>
+      );
 }
 
 export default App;
