@@ -2,7 +2,7 @@
 import { checkPalindrome } from './App'; // Update with correct import path
 
 describe('Palindrome Checker', () => {
-    test('Empty string should not be a palindrome', () => {
+    test('Empty string should be a palindrome', () => {
         expect(checkPalindrome('')).toBe(true);
     });
 

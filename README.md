@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Formative 1 - Palindrome Checker
+This project allows you to test if a given string is considered a palindrome.
+
+## What is a palindrome?
+A palindrome is a word, sentence, verse, or even number that reads the same backward or forward. It derives from Greek roots that literally mean “running back” (palin is “again, back,” and dromos, “running.”) The word appears to have been created in English based on these roots in the early 1600s. [Dictionary.com](https://www.dictionary.com/e/palindromic-word/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
